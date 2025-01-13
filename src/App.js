@@ -25,18 +25,18 @@ function App() {
     <div className="App">
       <main>
         <div className="question">{question}</div>
-        <div>
+        <div className="card">
           <img src={`/image/${questionImage}.png`}></img>
         </div>
         <div>
-          <div onClick={handleClick} data-value="가위">
+          <div className="card" onClick={handleClick} data-value="가위">
             <img src="/image/가위.png"></img>
           </div>
-          <div onClick={handleClick} data-value="바위">
+          <div className="card" onClick={handleClick} data-value="바위">
             {" "}
             <img src="/image/바위.png"></img>
           </div>
-          <div onClick={handleClick} data-value="보">
+          <div className="card" onClick={handleClick} data-value="보">
             {" "}
             <img src="/image/보.png"></img>
           </div>
