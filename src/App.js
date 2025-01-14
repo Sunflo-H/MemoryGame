@@ -24,11 +24,13 @@ function App() {
   return (
     <div className="App">
       <main>
-        <div className="question">{question}</div>
-        <div className="card">
-          <img src={`/image/${questionImage}.png`}></img>
+        <div className="question">
+          <div className="text">{question}</div>
+          <div className="card">
+            <img src={`/image/${questionImage}.png`}></img>
+          </div>
         </div>
-        <div>
+        <div className="my-card">
           <div className="card" onClick={handleClick} data-value="가위">
             <img src="/image/가위.png"></img>
           </div>

@@ -1,6 +1,7 @@
 :root {
   --bg-color: #f5f5f5;
   --card-bg-color: #ece7df;
+  --card-bg-color2: #faf5ef;
 }
 
 .App {
@@ -8,18 +9,41 @@
   background-color: var(--bg-color);
 }
 
-.question {
-  font-size: 3rem;
-}
-
 main {
   width: 480px;
   margin: auto;
 }
 
+.question {
+  margin-bottom: 60px;
+}
+
+.question .text {
+  font-size: 3rem;
+}
+
+.question .card {
+  background: white;
+}
+
+.my-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-card .card {
+  background-color: var(--card-bg-color2);
+  overflow: hidden;
+  box-shadow: 4px 4px 8px 1px var(--card-bg-color);
+  flex-basis: 30%;
+}
+
+.my-card .card img {
+  width: 100%;
+}
+
 .card {
   border-radius: 20px;
-  border: 1px solid black;
 }
 
 @media (max-width: 480px) {
