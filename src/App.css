@@ -4,41 +4,46 @@
   --card-bg-color2: #faf5ef;
 }
 
-.App {
+.container {
+  height: 100vh;
   text-align: center;
   background-color: var(--bg-color);
 }
 
 main {
   width: 480px;
+  height: 100%;
   margin: auto;
+  border: 1px solid black;
 }
 
-.question {
+.cpu-card {
   margin-bottom: 60px;
 }
 
-.question .text {
+.cpu-card .text {
   font-size: 3rem;
 }
 
-.question .card {
+.cpu-card .card {
   background: white;
 }
 
-.my-card {
+.user-hand {
   display: flex;
   justify-content: space-between;
 }
 
-.my-card .card {
+.user-hand .card {
+  width: 100%;
+  height: 144px;
   background-color: var(--card-bg-color2);
   overflow: hidden;
-  box-shadow: 4px 4px 8px 1px var(--card-bg-color);
+  box-shadow: 8px 8px 8px 1px rgb(0, 0, 0, 0.1);
   flex-basis: 30%;
 }
 
-.my-card .card img {
+.user-hand .card img {
   width: 100%;
 }
 
@@ -46,28 +51,39 @@ main {
   border-radius: 20px;
 }
 
-@media (max-width: 480px) {
-  html {
-    font-size: 12px; /* 모바일 */
+/* 💻 웹 (PC 화면, 1200px 이상) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* 🖥 중형 화면 (1024px ~ 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    width: 90%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 📱 태블릿 (768px ~ 1023px) */
+@media (max-width: 1023px) {
+  .container {
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* 📲 모바일 (480px ~ 767px) */
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+/* 📳 소형 모바일 (320px ~ 479px) */
+@media (max-width: 479px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
   }
 }

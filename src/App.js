@@ -22,15 +22,15 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="container">
       <main>
-        <div className="question">
-          <div className="text">{question}</div>
+        <div className="cpu-card">
+          <div className="prompt">{question}</div>
           <div className="card">
             <img src={`/image/${questionImage}.png`}></img>
           </div>
         </div>
-        <div className="my-card">
+        <div className="user-hand">
           <div className="card" onClick={handleClick} data-value="가위">
             <img src="/image/가위.png"></img>
           </div>
