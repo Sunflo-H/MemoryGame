@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="container">
       <main>
-        <div className="cpu-card">
+        <div className="cpu-hand">
           <div className="prompt">{question}</div>
           <div className="card">
             <img src={`/image/${questionImage}.png`}></img>
@@ -35,11 +35,9 @@ function App() {
             <img src="/image/가위.png"></img>
           </div>
           <div className="card" onClick={handleClick} data-value="바위">
-            {" "}
             <img src="/image/바위.png"></img>
           </div>
           <div className="card" onClick={handleClick} data-value="보">
-            {" "}
             <img src="/image/보.png"></img>
           </div>
         </div>

@@ -11,21 +11,25 @@
 }
 
 main {
-  width: 480px;
+  width: 767px;
   height: 100%;
   margin: auto;
   border: 1px solid black;
 }
 
-.cpu-card {
+.cpu-hand {
   margin-bottom: 60px;
 }
 
-.cpu-card .text {
+.prompt {
+  margin-top: 10px;
   font-size: 3rem;
 }
 
-.cpu-card .card {
+.cpu-hand .card {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
   background: white;
 }
 
@@ -53,28 +57,28 @@ main {
 
 /* 💻 웹 (PC 화면, 1200px 이상) */
 @media (min-width: 1200px) {
-  .container {
+  .main {
     width: 1200px;
   }
 }
 
 /* 🖥 중형 화면 (1024px ~ 1199px) */
 @media (max-width: 1199px) {
-  .container {
+  .main {
     width: 90%;
   }
 }
 
 /* 📱 태블릿 (768px ~ 1023px) */
 @media (max-width: 1023px) {
-  .container {
+  .main {
     width: 95%;
   }
 }
 
 /* 📲 모바일 (480px ~ 767px) */
 @media (max-width: 767px) {
-  .container {
+  .main {
     width: 100%;
     padding: 0 20px;
   }
@@ -82,7 +86,7 @@ main {
 
 /* 📳 소형 모바일 (320px ~ 479px) */
 @media (max-width: 479px) {
-  .container {
+  .main {
     width: 100%;
     padding: 0 10px;
   }
