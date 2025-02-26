@@ -1,6 +1,6 @@
 import "./App.css";
 
-const questionArr = [
+const promptArr = [
   "이겨주세요",
   "비겨주세요",
   "져주세요",
@@ -8,12 +8,11 @@ const questionArr = [
   "이기지말고 지지도 마세요",
   "비기지말고 이기지도 마세요",
 ];
-const questionImageArr = ["가위", "바위", "보"];
+const cpuHandArr = ["가위", "바위", "보"];
 
 function App() {
-  const question = questionArr[getRandomIndex(questionArr.length)];
-  const questionImage =
-    questionImageArr[getRandomIndex(questionImageArr.length)];
+  const question = promptArr[getRandomIndex(promptArr.length)];
+  const questionImage = cpuHandArr[getRandomIndex(cpuHandArr.length)];
 
   const handleClick = (e) => {
     const value = e.currentTarget.getAttribute("data-value");
@@ -73,9 +72,9 @@ function successCheck(question, image, select) {
       이겨주세요: "보",
       비겨주세요: "바위",
       져주세요: "가위",
-      "지지말고 비기지도 마세요": "바위",
-      "이기지말고 지지도 마세요": "가위",
-      "비기지말고 이기지도 마세요": "보",
+      "지지말고 비기지도 마세요": "보",
+      "이기지말고 지지도 마세요": "바위",
+      "비기지말고 이기지도 마세요": "가위",
     };
 
     const answer = answers[question];
