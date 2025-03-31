@@ -5,28 +5,31 @@
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   background-color: var(--bg-color);
+  padding: 20px 0;
 }
 
 main {
-  width: 767px;
-  height: 100%;
+  width: 100%;
+  max-width: 767px;
   margin: auto;
+  padding: 0 15px;
 }
 
 .cpu-hand {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .prompt {
   margin-top: 10px;
-  font-size: 3rem;
+  font-size: 2rem;
+  word-break: keep-all;
 }
 
 .cpu-hand .card {
-  width: 60%;
+  width: 80%;
   margin: auto;
   margin-top: 20px;
   background: white;
@@ -35,57 +38,199 @@ main {
 .user-hand {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px;
 }
 
 .user-hand .card {
   width: 30%;
-  height: 100%;
+  aspect-ratio: 1;
   background-color: var(--card-bg-color2);
   overflow: hidden;
-  box-shadow: 8px 8px 8px 1px rgb(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 4px 1px rgb(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.user-hand .card:active {
+  transform: scale(0.95);
 }
 
 .user-hand .card img {
   width: 80%;
+  height: 80%;
+  object-fit: contain;
+  padding: 10%;
 }
 
 .card {
-  border-radius: 20px;
-}
-
-/* 💻 웹 (PC 화면, 1200px 이상) */
-@media (min-width: 1200px) {
-  .main {
-    width: 1200px;
-  }
-}
-
-/* 🖥 중형 화면 (1024px ~ 1199px) */
-@media (max-width: 1199px) {
-  .main {
-    width: 90%;
-  }
+  border-radius: 15px;
 }
 
 /* 📱 태블릿 (768px ~ 1023px) */
-@media (max-width: 1023px) {
-  .main {
-    width: 95%;
+@media (min-width: 768px) {
+  main {
+    max-width: 90%;
+  }
+
+  .prompt {
+    font-size: 2.5rem;
+  }
+
+  .cpu-hand .card {
+    width: 70%;
+  }
+
+  .user-hand .card {
+    box-shadow: 6px 6px 6px 1px rgb(0, 0, 0, 0.1);
   }
 }
 
-/* 📲 모바일 (480px ~ 767px) */
-@media (max-width: 767px) {
-  .main {
-    width: 100%;
-    padding: 0 20px;
+/* 💻 웹 (1024px 이상) */
+@media (min-width: 1024px) {
+  main {
+    max-width: 1200px;
+  }
+
+  .prompt {
+    font-size: 3rem;
+  }
+
+  .cpu-hand .card {
+    width: 60%;
+  }
+
+  .user-hand .card {
+    box-shadow: 8px 8px 8px 1px rgb(0, 0, 0, 0.1);
   }
 }
 
-/* 📳 소형 모바일 (320px ~ 479px) */
-@media (max-width: 479px) {
-  .main {
-    width: 100%;
-    padding: 0 10px;
+:root {
+  --bg-color: #f5f5f5;
+  --card-bg-color: #ece7df;
+  --card-bg-color2: #faf5ef;
+}
+
+.container {
+  min-height: 100vh;
+  text-align: center;
+  background-color: var(--bg-color);
+  padding: 20px 0;
+}
+
+main {
+  width: 100%;
+  max-width: 767px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.cpu-hand {
+  margin-bottom: 30px;
+}
+
+.prompt {
+  margin-top: 10px;
+  font-size: 2rem;
+  word-break: keep-all;
+}
+
+.cpu-hand .card {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  background: white;
+}
+
+.user-hand {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.user-hand .card {
+  width: 30%;
+  aspect-ratio: 1;
+  background-color: var(--card-bg-color2);
+  overflow: hidden;
+  box-shadow: 4px 4px 4px 1px rgb(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.user-hand .card:active {
+  transform: scale(0.95);
+}
+
+.user-hand .card img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  padding: 10%;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+/* 📱 태블릿 (768px ~ 1023px) */
+@media (min-width: 768px) {
+  main {
+    max-width: 90%;
+  }
+
+  .prompt {
+    font-size: 2.5rem;
+  }
+
+  .cpu-hand .card {
+    width: 70%;
+  }
+
+  .user-hand .card {
+    box-shadow: 6px 6px 6px 1px rgb(0, 0, 0, 0.1);
+  }
+}
+
+/* 💻 웹 (1024px 이상) */
+@media (min-width: 1024px) {
+  main {
+    max-width: 1200px;
+  }
+
+  .prompt {
+    font-size: 3rem;
+  }
+
+  .cpu-hand .card {
+    width: 60%;
+  }
+
+  .user-hand .card {
+    box-shadow: 8px 8px 8px 1px rgb(0, 0, 0, 0.1);
+  }
+}
+
+/* 애니메이션 클래스 */
+.card.moving {
+  /* position: fixed; */
+  z-index: 1000;
+  animation: moveUpToCPU 1s ease-out forwards;
+}
+
+@keyframes moveUpToCPU {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  30% {
+    transform: translateY(20px) scale(1);
+  }
+  70% {
+    transform: translateY(-400px) scale(1);
+  }
+  100% {
+    transform: translateY(-100px) scale(1);
+    /* opacity: 0; */
   }
 }
