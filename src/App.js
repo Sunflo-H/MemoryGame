@@ -29,6 +29,7 @@ function App() {
       // 애니메이션 클래스 제거
       card.classList.remove("moving");
     }, 1100);
+    console.log("hi");
   };
 
   return (
